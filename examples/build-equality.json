@@ -1,0 +1,1 @@
+{"profile":"semver-precedence/1","synthetic":true,"cases":[{"id":"build","left":"1.0.0+one","right":"1.0.0+two"}]}

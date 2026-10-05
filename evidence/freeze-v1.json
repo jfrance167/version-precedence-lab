@@ -1,0 +1,16 @@
+{
+  "phase": "before product code",
+  "cases": 41,
+  "files": [
+    {
+      "path": "CONTRACT.md",
+      "sha256": "f19ddab585069468ac7da52250c67d60b5d38cabdfac45c799e917c5262aee47",
+      "bytes": 5637
+    },
+    {
+      "path": "tests/cases.json",
+      "sha256": "e6515d1d91a6f896c7b9535e01a45ae2c11882ab5c31e3daba796dc5ab1ad36c",
+      "bytes": 68946
+    }
+  ]
+}

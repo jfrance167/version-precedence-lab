@@ -1,0 +1,17 @@
+# Version precedence lab state
+
+Updated October 5, 2026. Phase: approved local stages1–4 complete and verified. Coordinator approved PLAN stages1–4 at03:51 under Jake's direct delegation; addendum recorded in PLAN.
+
+Authorization: local stages 1–4, same existing chat/sole writer/separate directory, delegated cutoff October 6 at 08:00 Eastern. Authority reference: .private/coordination/2026-10-05/SUCCESSORS.md, “Pointer and SemVer approvals; HTTP/ACL completion held for delivery fixes — October 5, 03:51 heartbeat.” Jake's direct coordinator delegation was independently inspected; no new repo/install/publication/spending authority.
+
+Completed: research plus frozen CONTRACT/41 independent full reports; bounded whole admission/strict SemVer parser/immutable comparator; controlled API/CLI/file delivery; normal24/optimized24/restored24 tests and41 actual CLI cases per mode;121 pairs/1,331 transitivity triple candidates;3 assertion-detected mutants with unchanged original; compile/pure-source gate; installed Bandit production0 findings/errors, separate7 LOW harness advisories retained; ECC self-review fixes/affected rechecks; reproducible verifier,16 current source/test/contract/oracle receipt hashes matched;3 actual demo reports; README/MIT/NOTICE/SECURITY/DECISIONS/LEARNING. Parent Git/prior labs preserved, no new repo/install/publication.
+
+Worker choice: local qwen3.5:2b draft rejected for build/prerelease errors; one fresh verified-free OpenRouter draft returned no text, no retry/fallback. Codex drafted reviewed planning and implemented/reviewed the bounded tool. Laya schema unsuitable. No upstream candidate execution/install, hosted checks, real packages or independent audit claimed.
+
+Pending: coordinator acceptance of concrete local result. All owner stages complete, no known active bugs. No further project/successor implementation inferred. Verification raw selector: .verification-work/acceptance-6d753f5a7f3b42cb9925fa684e3fe976; evidence/receipt.json selects current run. Historical first acceptance remains preserved. One expected-profile correction and original freeze bytes disclosed in evidence/oracle-correction.md.
+
+Limits: only CPython3.13.7 Windows tested, no hosted/multiple-runtime/real-package or hostile-filesystem/concurrent-mutation/durability/hard-resource proof. Output cap unreachable with admitted model; tests use labeled seams. Local credential-pattern check of product/test/script/example text:0 matches; no private inventory/GLPI content or Git history created. See VERIFICATION/REVIEW.
+
+Vault research milestone saved and hash-verified: C:/Users/Jake/Downloads/Jakes Vault/02 Research/2026-10-05 Version Precedence Lab Research.md. SHA-256 48cc134e6a70e8670a28c6a02b42e24abf06ec0442717d8bef849981b1e7eb61 matches the retained pending source. App-approved write succeeded; no existing note was overwritten.
+
+Implementation milestone saved/hash-verified: C:/Users/Jake/Downloads/Jakes Vault/02 Research/2026-10-05 Version Precedence Lab Implementation.md, SHA-256 a27adf7fa87626287f6e21be18185c07a968b3fd7dedf7f1f63664eb045ea6d7 matches retained pending source. Research note now adds a completion link and preserves all original text as a suffix; current SHA-256 93d5a24ed22c8057bfa4b4813d246c03dde67c46fc5f073d59eda1ef02b5f0d1. Earlier research digest above is the preserved initial milestone, not the current linked note. Both app-approved writes succeeded.

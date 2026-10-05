@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-05T08:40:48.127127+00:00",
+  "runtime": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "win32",
+  "counts": {
+    "normal": 25,
+    "optimized": 25
+  },
+  "frozen_cases": 41,
+  "actual_cli_cases_per_mode": 41,
+  "checks": [
+    {
+      "check": "normal",
+      "exit": 0
+    },
+    {
+      "check": "optimized",
+      "exit": 0
+    },
+    {
+      "check": "compile",
+      "exit": 0
+    },
+    {
+      "check": "mutations",
+      "exit": 0
+    },
+    {
+      "check": "restored",
+      "exit": 0
+    },
+    {
+      "check": "bandit-production",
+      "exit": 0
+    },
+    {
+      "check": "bandit-harness",
+      "exit": 1
+    }
+  ],
+  "mutations": {
+    "outcomes": [
+      {
+        "mutation": "build_tiebreak",
+        "target": "build_equal",
+        "exit": 1,
+        "intended_assertion_detected": true
+      },
+      {
+        "mutation": "lexical_numeric",
+        "target": "numeric_pre",
+        "exit": 1,
+        "intended_assertion_detected": true
+      },
+      {
+        "mutation": "reverse_release",
+        "target": "release_greater",
+        "exit": 1,
+        "intended_assertion_detected": true
+      }
+    ],
+    "original_unchanged": true,
+    "original_sha256": "16f6027ee69b83d97bc821e2c76881ae5a3e780f1f465356ad98ef101ed26a13",
+    "work": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\version-precedence-lab\\.verification-work\\mutations-4537c6e0cf974b238a0e5c4a45e59406"
+  },
+  "source_sha256": [
+    {
+      "path": "CONTRACT.md",
+      "bytes": 5637,
+      "sha256": "f19ddab585069468ac7da52250c67d60b5d38cabdfac45c799e917c5262aee47"
+    },
+    {
+      "path": "lab.py",
+      "bytes": 264,
+      "sha256": "db15c469f478026b15fa79cd05e40c889f01a3f8ad02dea916904ae737df12e3"
+    },
+    {
+      "path": "tests/cases.json",
+      "bytes": 71622,
+      "sha256": "aa66122b0da10c5aa53943d42c8ac22e6dcc4b981d23f0d08606d0dd1cd99847"
+    },
+    {
+      "path": "evidence/freeze.json",
+      "bytes": 426,
+      "sha256": "3f6cdaf8fe7b87c403fe7c81d9d1aca4ab1c8fe08e303e64ef557688189064e8"
+    },
+    {
+      "path": "evidence/freeze-v1.json",
+      "bytes": 383,
+      "sha256": "4cf13cc1b784d49b0b809973977b62a5751284c2de1c08de0bd6f7646eb27592"
+    },
+    {
+      "path": "evidence/cases-freeze-v1.json",
+      "bytes": 68946,
+      "sha256": "e6515d1d91a6f896c7b9535e01a45ae2c11882ab5c31e3daba796dc5ab1ad36c"
+    },
+    {
+      "path": "semver_lab/__init__.py",
+      "bytes": 191,
+      "sha256": "75671a5c5da28cc655be75aeab7cf7476f23586897944f027de78fce27e15929"
+    },
+    {
+      "path": "semver_lab/admission.py",
+      "bytes": 5975,
+      "sha256": "941fe5a3c2fbc0c47a90b256d88c8514e2263622b064fcefbfc620fcda8abb56"
+    },
+    {
+      "path": "semver_lab/cli.py",
+      "bytes": 3133,
+      "sha256": "e297eecea3c2874e210332e8de9e396bb4abd3650c1f611a28957d554ce705dc"
+    },
+    {
+      "path": "semver_lab/model.py",
+      "bytes": 2753,
+      "sha256": "31fb5b3c30edbc947d454826f594152c04421f191f53687588b3214e29ced857"
+    },
+    {
+      "path": "semver_lab/version.py",
+      "bytes": 3515,
+      "sha256": "16f6027ee69b83d97bc821e2c76881ae5a3e780f1f465356ad98ef101ed26a13"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "bytes": 4662,
+      "sha256": "5686743630c721b0dde57a91701470731202183819758666f473df956998cb1a"
+    },
+    {
+      "path": "tests/test_model.py",
+      "bytes": 10391,
+      "sha256": "9adbdc35d6cf8f9ce631ff2d254fcaf046314d6173e50f363ce941d2f86cfef3"
+    },
+    {
+      "path": "scripts/run_tests.py",
+      "bytes": 368,
+      "sha256": "841deb729181fa691568690fca76ab53a5355557900783a5a6408dbec5b6ed37"
+    },
+    {
+      "path": "scripts/verify_mutations.py",
+      "bytes": 2955,
+      "sha256": "9de31bdce1a84efb082e940dbaa7268b339a055d4d917f53d2f614999a5044a0"
+    },
+    {
+      "path": "scripts/verify_project.py",
+      "bytes": 5432,
+      "sha256": "bac63ed64ba9976d0d412f50560d036b93bf9d8e1fce5a964ccefada964e3eb6"
+    }
+  ],
+  "finite_domain": {
+    "versions": 11,
+    "pairs": 121,
+    "triples": 1331
+  },
+  "bandit": {
+    "production_findings": 0,
+    "production_errors": 0,
+    "harness_findings": 7,
+    "harness_errors": 0
+  },
+  "pure_source_gate": "PASS; static inspection only",
+  "hosted": "NOT RUN",
+  "real_packages": false,
+  "raw_directory": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\version-precedence-lab\\.verification-work\\acceptance-ee99ddde4e104332b9348c82bc11f8cc"
+}

@@ -1,0 +1,2693 @@
+{
+  "provenance": "Hand-specified complete reports frozen before product source; part fields supplied explicitly, no product parser/comparator called",
+  "cases": [
+    {
+      "id": "build_equal",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0+one",
+            "right": "1.0.0+two"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0+one",
+            "right": "1.0.0+two",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": [
+                "one"
+              ]
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": [
+                "two"
+              ]
+            },
+            "relation": "equal",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "equal",
+              "index": null,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "build_zeroes",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0+001",
+            "right": "1.0.0+1"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0+001",
+            "right": "1.0.0+1",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": [
+                "001"
+              ]
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": [
+                "1"
+              ]
+            },
+            "relation": "equal",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "equal",
+              "index": null,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "identity",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0",
+            "right": "1.0.0",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "relation": "equal",
+            "literal_equal": true,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "equal",
+              "index": null,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "canonical_1",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-alpha",
+            "right": "1.0.0-alpha.1"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-alpha",
+            "right": "1.0.0-alpha.1",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                },
+                {
+                  "value": "1",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "prerelease_prefix",
+              "index": null,
+              "left": 1,
+              "right": 2
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "canonical_2",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-alpha.1",
+            "right": "1.0.0-alpha.beta"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-alpha.1",
+            "right": "1.0.0-alpha.beta",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                },
+                {
+                  "value": "1",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                },
+                {
+                  "value": "beta",
+                  "kind": "text"
+                }
+              ],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "numeric_vs_text",
+              "index": 1,
+              "left": "1",
+              "right": "beta"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "canonical_3",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-alpha.beta",
+            "right": "1.0.0-beta"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-alpha.beta",
+            "right": "1.0.0-beta",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                },
+                {
+                  "value": "beta",
+                  "kind": "text"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "beta",
+                  "kind": "text"
+                }
+              ],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "prerelease_text",
+              "index": 0,
+              "left": "alpha",
+              "right": "beta"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "canonical_4",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-beta",
+            "right": "1.0.0-beta.2"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-beta",
+            "right": "1.0.0-beta.2",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "beta",
+                  "kind": "text"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "beta",
+                  "kind": "text"
+                },
+                {
+                  "value": "2",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "prerelease_prefix",
+              "index": null,
+              "left": 1,
+              "right": 2
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "canonical_5",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-beta.2",
+            "right": "1.0.0-beta.11"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-beta.2",
+            "right": "1.0.0-beta.11",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "beta",
+                  "kind": "text"
+                },
+                {
+                  "value": "2",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "beta",
+                  "kind": "text"
+                },
+                {
+                  "value": "11",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "prerelease_numeric",
+              "index": 1,
+              "left": "2",
+              "right": "11"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "canonical_6",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-beta.11",
+            "right": "1.0.0-rc.1"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-beta.11",
+            "right": "1.0.0-rc.1",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "beta",
+                  "kind": "text"
+                },
+                {
+                  "value": "11",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "rc",
+                  "kind": "text"
+                },
+                {
+                  "value": "1",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "prerelease_text",
+              "index": 0,
+              "left": "beta",
+              "right": "rc"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "canonical_7",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-rc.1",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-rc.1",
+            "right": "1.0.0",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "rc",
+                  "kind": "text"
+                },
+                {
+                  "value": "1",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "release_presence",
+              "index": null,
+              "left": true,
+              "right": false
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "numeric_text",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-9",
+            "right": "1.0.0-alpha"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-9",
+            "right": "1.0.0-alpha",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "9",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                }
+              ],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "numeric_vs_text",
+              "index": 0,
+              "left": "9",
+              "right": "alpha"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "ascii_case",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-A",
+            "right": "1.0.0-a"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-A",
+            "right": "1.0.0-a",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "A",
+                  "kind": "text"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "a",
+                  "kind": "text"
+                }
+              ],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "prerelease_text",
+              "index": 0,
+              "left": "A",
+              "right": "a"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "major_length",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "9.0.0",
+            "right": "10.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "9.0.0",
+            "right": "10.0.0",
+            "parts_left": {
+              "core": [
+                "9",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "10",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "core_major",
+              "index": 0,
+              "left": "9",
+              "right": "10"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "minor_numeric",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.2.0",
+            "right": "1.10.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.2.0",
+            "right": "1.10.0",
+            "parts_left": {
+              "core": [
+                "1",
+                "2",
+                "0"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "10",
+                "0"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "core_minor",
+              "index": 1,
+              "left": "2",
+              "right": "10"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "patch_numeric",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.2",
+            "right": "1.0.10"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.2",
+            "right": "1.0.10",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "2"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "10"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "core_patch",
+              "index": 2,
+              "left": "2",
+              "right": "10"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "patch_before_pre",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0",
+            "right": "1.0.1-0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0",
+            "right": "1.0.1-0",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "1"
+              ],
+              "prerelease": [
+                {
+                  "value": "0",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "core_patch",
+              "index": 2,
+              "left": "0",
+              "right": "1"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "leading_zero_text",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-01a",
+            "right": "1.0.0-1"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-01a",
+            "right": "1.0.0-1",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "01a",
+                  "kind": "text"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "1",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "relation": "greater",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "numeric_vs_text",
+              "index": 0,
+              "left": "01a",
+              "right": "1"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "hyphen_text",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0--",
+            "right": "1.0.0-0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0--",
+            "right": "1.0.0-0",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "-",
+                  "kind": "text"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "0",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "relation": "greater",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "numeric_vs_text",
+              "index": 0,
+              "left": "-",
+              "right": "0"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "numeric_pre",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-alpha.2",
+            "right": "1.0.0-alpha.10"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-alpha.2",
+            "right": "1.0.0-alpha.10",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                },
+                {
+                  "value": "2",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                },
+                {
+                  "value": "10",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "relation": "less",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "prerelease_numeric",
+              "index": 1,
+              "left": "2",
+              "right": "10"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "pre_build_equal",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-alpha",
+            "right": "1.0.0-alpha+001.Z"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-alpha",
+            "right": "1.0.0-alpha+001.Z",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                }
+              ],
+              "build": [
+                "001",
+                "Z"
+              ]
+            },
+            "relation": "equal",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "equal",
+              "index": null,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "release_greater",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0",
+            "right": "1.0.0-rc.1"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0",
+            "right": "1.0.0-rc.1",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "rc",
+                  "kind": "text"
+                },
+                {
+                  "value": "1",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "relation": "greater",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "release_presence",
+              "index": null,
+              "left": false,
+              "right": true
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "reverse_major",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "10.0.0",
+            "right": "9.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "10.0.0",
+            "right": "9.0.0",
+            "parts_left": {
+              "core": [
+                "10",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "9",
+                "0",
+                "0"
+              ],
+              "prerelease": [],
+              "build": []
+            },
+            "relation": "greater",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "core_major",
+              "index": 0,
+              "left": "10",
+              "right": "9"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "reverse_pre",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-alpha.10",
+            "right": "1.0.0-alpha.2"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [
+          {
+            "index": 0,
+            "id": "pair",
+            "left": "1.0.0-alpha.10",
+            "right": "1.0.0-alpha.2",
+            "parts_left": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                },
+                {
+                  "value": "10",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "parts_right": {
+              "core": [
+                "1",
+                "0",
+                "0"
+              ],
+              "prerelease": [
+                {
+                  "value": "alpha",
+                  "kind": "text"
+                },
+                {
+                  "value": "2",
+                  "kind": "numeric"
+                }
+              ],
+              "build": []
+            },
+            "relation": "greater",
+            "literal_equal": false,
+            "build_ignored": true,
+            "evidence": {
+              "rule": "prerelease_numeric",
+              "index": 1,
+              "left": "10",
+              "right": "2"
+            }
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "id": "core_zero",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "01.0.0",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "version_grammar",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "pre_zero",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-01",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "version_grammar",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "short_core",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "version_grammar",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "empty_pre",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "version_grammar",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "empty_build",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0+",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "version_grammar",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "empty_ident",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-a..b",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "version_grammar",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "v_prefix",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "v1.0.0",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "version_grammar",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "whitespace",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": " 1.0.0",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "version_grammar",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "epoch",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1!1.0.0",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "version_grammar",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "right_invalid",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "0.0.0",
+            "right": "9.0.0-01"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "version_grammar",
+          "path": "/cases/0/right"
+        }
+      }
+    },
+    {
+      "id": "ascii_invalid",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-ä",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": null,
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "ascii_required",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "core_cap",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "111111111111111111111111111111111.0.0",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "limit",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "core_limit",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "pre_cap",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0-111111111111111111111111111111111",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "limit",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "numeric_prerelease_limit",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "count_cap",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0+a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "limit",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "identifier_count_limit",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "ident_cap",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "pair",
+            "left": "1.0.0+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "limit",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "identifier_limit",
+          "path": "/cases/0/left"
+        }
+      }
+    },
+    {
+      "id": "empty",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": []
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "complete",
+        "evaluation": "complete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": [],
+        "error": null
+      }
+    },
+    {
+      "id": "unknown_common_only",
+      "input": {
+        "profile": "future/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "opaque",
+            "left": "",
+            "right": "not_semver"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "future/1",
+        "status": "unsupported",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "profile_unsupported",
+          "path": "/profile"
+        }
+      }
+    },
+    {
+      "id": "all_grammar_before_caps",
+      "input": {
+        "profile": "semver-precedence/1",
+        "synthetic": true,
+        "cases": [
+          {
+            "id": "cap",
+            "left": "111111111111111111111111111111111.0.0",
+            "right": "1.0.0"
+          },
+          {
+            "id": "bad",
+            "left": "1.0",
+            "right": "1.0.0"
+          }
+        ]
+      },
+      "expected": {
+        "schema": "semver-precedence-report/1",
+        "input_profile": "semver-precedence/1",
+        "status": "invalid",
+        "evaluation": "incomplete",
+        "limits": {
+          "raw_bytes": 65536,
+          "depth": 8,
+          "nodes": 4096,
+          "cases": 64,
+          "version_chars": 256,
+          "numeric_digits": 32,
+          "identifiers": 16,
+          "identifier_chars": 64,
+          "output_bytes": 1048576
+        },
+        "assumptions": {
+          "standard": "SemVer 2.0.0 bounded syntax/precedence",
+          "package_existence": "unknown",
+          "authenticity": "unknown",
+          "compatibility": "unknown",
+          "security": "unknown"
+        },
+        "cases": null,
+        "error": {
+          "code": "version_grammar",
+          "path": "/cases/1/left"
+        }
+      }
+    }
+  ]
+}

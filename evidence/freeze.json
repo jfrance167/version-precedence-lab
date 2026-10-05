@@ -1,0 +1,16 @@
+{
+  "phase": "v2 oracle correction after first checks, original v1 preserved",
+  "cases": 41,
+  "files": [
+    {
+      "path": "CONTRACT.md",
+      "sha256": "f19ddab585069468ac7da52250c67d60b5d38cabdfac45c799e917c5262aee47",
+      "bytes": 5637
+    },
+    {
+      "path": "tests/cases.json",
+      "sha256": "aa66122b0da10c5aa53943d42c8ac22e6dcc4b981d23f0d08606d0dd1cd99847",
+      "bytes": 71622
+    }
+  ]
+}

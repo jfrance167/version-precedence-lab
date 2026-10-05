@@ -1,0 +1,77 @@
+test_actual_all_frozen (test_cli.CLITests.test_actual_all_frozen) ... ok
+test_actual_closed_pipes_shutdown (test_cli.CLITests.test_actual_closed_pipes_shutdown) ... ok
+test_close_and_output_cap_seams (test_cli.CLITests.test_close_and_output_cap_seams) ... ok
+test_dirty_short_flush_and_both_sinks (test_cli.CLITests.test_dirty_short_flush_and_both_sinks) ... ok
+test_fresh_existing_empty_directory (test_cli.CLITests.test_fresh_existing_empty_directory) ... ok
+test_missing_usage_help (test_cli.CLITests.test_missing_usage_help) ... ok
+test_nonlocal_paths (test_cli.CLITests.test_nonlocal_paths) ... ok
+test_alias_and_node_accounting (test_model.ModelTests.test_alias_and_node_accounting) ... ok
+test_case_boundaries (test_model.ModelTests.test_case_boundaries) ... ok
+test_component_bounds (test_model.ModelTests.test_component_bounds) ... ok
+test_duplicate_id_and_fields (test_model.ModelTests.test_duplicate_id_and_fields) ... ok
+test_exact_type_and_cycles (test_model.ModelTests.test_exact_type_and_cycles) ... ok
+test_finite_algebra (test_model.ModelTests.test_finite_algebra) ... ok
+test_freeze_hashes (test_model.ModelTests.test_freeze_hashes) ... ok
+test_frozen_reports (test_model.ModelTests.test_frozen_reports) ... ok
+test_immutable_detached (test_model.ModelTests.test_immutable_detached) ... ok
+test_json_decoder_controls (test_model.ModelTests.test_json_decoder_controls) ... ok
+test_late_common_before_unknown (test_model.ModelTests.test_late_common_before_unknown) ... ok
+test_maximum_shape_fits_output (test_model.ModelTests.test_maximum_shape_fits_output) ... ok
+test_native_depth_and_int (test_model.ModelTests.test_native_depth_and_int) ... ok
+test_native_dfs_error_order (test_model.ModelTests.test_native_dfs_error_order) ... ok
+test_native_metaclass_hooks_never_called (test_model.ModelTests.test_native_metaclass_hooks_never_called) ... 
+  test_native_metaclass_hooks_never_called (test_model.ModelTests.test_native_metaclass_hooks_never_called) (mode='false') ... FAIL
+  test_native_metaclass_hooks_never_called (test_model.ModelTests.test_native_metaclass_hooks_never_called) (mode='true') ... ERROR
+  test_native_metaclass_hooks_never_called (test_model.ModelTests.test_native_metaclass_hooks_never_called) (mode='raise') ... ERROR
+test_oracle_correction_lineage (test_model.ModelTests.test_oracle_correction_lineage) ... ok
+test_raw_depth_boundaries (test_model.ModelTests.test_raw_depth_boundaries) ... ok
+test_serialization_and_output_seam (test_model.ModelTests.test_serialization_and_output_seam) ... ok
+
+======================================================================
+ERROR: test_native_metaclass_hooks_never_called (test_model.ModelTests.test_native_metaclass_hooks_never_called) (mode='true')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Jake\OneDrive - Alfred State College\Documents\New project\version-precedence-lab\tests\test_model.py", line 112, in test_native_metaclass_hooks_never_called
+    preflight(obj)
+    ~~~~~~~~~^^^^^
+  File "C:\Users\Jake\OneDrive - Alfred State College\Documents\New project\version-precedence-lab\semver_lab\admission.py", line 113, in preflight
+    if len(obj) > LIMITS["nodes"] - nodes:
+       ~~~^^^^^
+  File "C:\Users\Jake\OneDrive - Alfred State College\Documents\New project\version-precedence-lab\tests\test_model.py", line 108, in __len__
+    raise RuntimeError("caller hook executed")
+RuntimeError: caller hook executed
+
+======================================================================
+ERROR: test_native_metaclass_hooks_never_called (test_model.ModelTests.test_native_metaclass_hooks_never_called) (mode='raise')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Jake\OneDrive - Alfred State College\Documents\New project\version-precedence-lab\tests\test_model.py", line 112, in test_native_metaclass_hooks_never_called
+    preflight(obj)
+    ~~~~~~~~~^^^^^
+  File "C:\Users\Jake\OneDrive - Alfred State College\Documents\New project\version-precedence-lab\semver_lab\admission.py", line 110, in preflight
+    elif kind in (dict, list):
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jake\OneDrive - Alfred State College\Documents\New project\version-precedence-lab\tests\test_model.py", line 98, in __eq__
+    raise RuntimeError("caller hook executed")
+RuntimeError: caller hook executed
+
+======================================================================
+FAIL: test_native_metaclass_hooks_never_called (test_model.ModelTests.test_native_metaclass_hooks_never_called) (mode='false')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Jake\OneDrive - Alfred State College\Documents\New project\version-precedence-lab\tests\test_model.py", line 114, in test_native_metaclass_hooks_never_called
+    self.assertEqual(calls, [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: Lists differ: ['eq', 'eq', 'eq', 'eq'] != []
+
+First list contains 4 additional elements.
+First extra element 0:
+'eq'
+
+- ['eq', 'eq', 'eq', 'eq']
++ []
+
+----------------------------------------------------------------------
+Ran 25 tests in 6.299s
+
+FAILED (failures=1, errors=2)
